@@ -1,7 +1,42 @@
-echo "# Skaftkarr-s-" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/laitija/Skaftkarr-s-.git
-git push -u origin main
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skaftkärrin sää</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Skaftkärrin sää</h1>
+    <button id="themeToggle">Vaihda teema</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Nykyinen sää</h2>
+      <p id="current">Ladataan...</p>
+    </section>
+
+    <section>
+      <h2>Tuntiennuste</h2>
+      <canvas id="tempChart"></canvas>
+    </section>
+
+    <section>
+      <h2>Saderadari</h2>
+      <div id="map" style="height:400px;"></div>
+    </section>
+
+    <section>
+      <h2>Varoitukset</h2>
+      <ul id="warnings"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
